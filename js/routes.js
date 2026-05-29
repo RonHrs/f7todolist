@@ -8,4 +8,5 @@ var routes = [
     path: '/taches/',
     url: './Pages/taches.html',
   },
+
 ];

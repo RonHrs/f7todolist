@@ -247,6 +247,7 @@ $$(document).on('click', '.filtre-btn', function () {
   $$(this).addClass('button-active'); 
   filtreActif = $$(this).attr('data-filtre');
   afficherTaches();
+  
 });
 
 //  SÉANCE 3 — ajouter :
