@@ -14,6 +14,33 @@ var app = new Framework7({
 
 var mainView = app.views.create('.view-main', { url: '/' });
 
+
+// ======================================
+// LOCAL STORAGE
+// ======================================
+
+// clé utilisée dans le localStorage
+var CLE = 'ma-todo-taches';
+
+// Charger les tâches
+function chargerTaches() {
+    var data = localStorage.getItem(CLE);
+
+    if (data) {
+        return JSON.parse(data);
+    }
+
+    return [];
+}
+
+// Sauvegarder les tâches
+function sauvegarder() {
+    localStorage.setItem(CLE, JSON.stringify(taches));
+}
+
+// Tableau principal
+let taches = chargerTaches();
+
 // ============================================================
 //  SÉANCE 2 — déclarer le tableau des tâches, puis :
 //    - une fonction afficher() qui construit la liste
@@ -188,9 +215,9 @@ function basculerTache(id) {
     if (t) {
         t.fait = !t.fait;
 
+        sauvegarder();
         afficherTaches();
     }
-    sauvegarder()
 }
  
 $$(document).on('change', '.liste-taches input[type="checkbox"]', function () { 
@@ -226,13 +253,6 @@ $$(document).on('click', '.filtre-btn', function () {
   filtreActif = $$(this).attr('data-filtre');
   afficherTaches();
 });
-
-
-
-
-
-
-
 
 //  SÉANCE 3 — ajouter :
 //    - basculerTache(id) pour cocher / décocher
