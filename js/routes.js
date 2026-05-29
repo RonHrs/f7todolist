@@ -1,12 +1,10 @@
-//Routes de l'application
-
 var routes = [
-  {
-    path: '/',
-    url: '../pages/accueil.html',
-  },
-  {
-    path: '/taches/',
-    url: '../pages/taches.html',
-  },
+    {
+        path: '/',
+        url: './Pages/acceuil.html',
+    },
+    {
+        path: '/taches/',
+        url: './Pages/taches.html',
+    },
 ];
