@@ -56,11 +56,6 @@ let taches = [
     { id: 4, texte: "Module F7 - Session 3", fait: false },
 ];
 */
-
-let taches = chargerTaches(); 
-//cle utiliser dans le localstorage
-var CLE = 'ma-todo-taches'; 
-
 //////////////////////////////////////////////////////////////////////::
 //actions
 
@@ -203,6 +198,9 @@ $$(document).on('page:init', '.page[data-name="taches"]', function () {
 });
 
 
+//Cocher decocher
+// Cocher / décocher une tâche
+function basculerTache(id) {
 
 //Cocher decocher
 // Cocher / décocher une tâche
@@ -252,6 +250,7 @@ $$(document).on('click', '.filtre-btn', function () {
   $$(this).addClass('button-active'); 
   filtreActif = $$(this).attr('data-filtre');
   afficherTaches();
+  
 });
 
 //  SÉANCE 3 — ajouter :
