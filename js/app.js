@@ -56,11 +56,6 @@ let taches = [
     { id: 4, texte: "Module F7 - Session 3", fait: false },
 ];
 */
-
-let taches = chargerTaches(); 
-//cle utiliser dans le localstorage
-var CLE = 'ma-todo-taches'; 
-
 //////////////////////////////////////////////////////////////////////::
 //actions
 
