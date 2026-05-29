@@ -198,6 +198,9 @@ $$(document).on('page:init', '.page[data-name="taches"]', function () {
 });
 
 
+//Cocher decocher
+// Cocher / décocher une tâche
+function basculerTache(id) {
 
 //Cocher decocher
 // Cocher / décocher une tâche
